@@ -1,0 +1,59 @@
+#Rename this file to terraform.tfvars and that should provide your first set of values for the cidr_block_map variable
+#Note that terraform.tfvars is git ignored so your personal one will not be checked back into git - so feel free to experiment!
+
+my_sg_name = "xx-allow-ingress-for-users-sg"
+
+cidr_block_map = {
+  "10.11.24.0/22" = [
+    {
+      description = "Allow access from Offshore Pool Users to 32020"
+      port        = 32020
+    },
+    {
+      description = "Allow access from Offshore Pool Users to 32040"
+      port        = 32040
+    },
+    {
+      description = "Allow access from Offshore Pool Users to 32050"
+      port        = 32050
+    },
+    {
+      description = "Allow access from Offshore Pool Users to 32080"
+      port        = 32080
+    },
+    {
+      description = "Allow access from Offshore Pool Users to 32090"
+      port        = 32090
+    }
+  ],
+
+  "10.30.40.0/22" = [
+    {
+      description = "Allow access from Remote Roaming Users to 32090"
+      port        = 32090
+    },
+    {
+      description = "Allow access from Remote Roaming Users to 32080"
+      port        = 32080
+    },
+    {
+      description = "Allow access from Remote Roaming Users to 32050"
+      port        = 32050
+    },
+    {
+      description = "Allow access from Remote Roaming Users to 32040"
+      port        = 32040
+    },
+    {
+      description = "Allow access from Remote Roaming Users to 32020"
+      port        = 32020
+    }
+  ],
+
+  "10.33.88.0/24" = [
+    {
+      description = "Allow access from Onsite DBAs towards RDS Aurora PostgreSQL Database"
+      port        = 5432
+    }
+  ]
+}

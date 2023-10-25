@@ -1,6 +1,6 @@
-output "cac-c5-vpc-id" {
-  description = "The VPC ID for CIL Academy C5"
-  value       = data.aws_vpc.cac-c5-vpc-id.id
+output "cbm-security-group-vpc-id" {
+  description = "The VPC ID where the Security Group will be created"
+  value       = data.aws_vpc.sg-vpc-id.id
 }
 
 output "cbm-security-group-id" {

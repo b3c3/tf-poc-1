@@ -1,0 +1,86 @@
+KEY
+"10.88.24.0/22"
+
+
+VALUE
+#####################################
+
+Line 10 
+
+L-10-KEY => 0 POSITION
+L-10-VALUE =>
+	{
+        	description = "Allow access from somewhere...."
+        	port        = 32020
+      	},
+
+		port_desc_object.description => .........
+		port_desc_object.port => 32020
+
+L-10-KEY => 1 POSITION
+L-10-VALUE =>
+      {
+        description = "Allow access from somewhere...."
+        port        = 32040
+      },
+
+L-10-KEY => 2 POSITION
+L-10-VALUE =>
+      {
+        description = "Allow access from somewhere...."
+        port        = 32050
+      }
+
+L-10-KEY => 3 POSITION
+L-10-VALUE =>
+      {
+        description = "Allow access from somewhere...."
+        port        = 32080
+      }
+
+L-10-KEY => 4 POSITION
+L-10-VALUE =>
+      {
+        description = "Allow access from somewhere...."
+        port        = 32090
+      }
+#####################################
+
+
+KEY
+"1.1.1.1/23"
+VALUE
+#####################################
+L-10-KEY => 0 POSITION
+L-10-VALUE =>
+ 	{
+        description = "Allow access from somewhere...."
+        port        = 32020
+      },
+L-10-KEY => 1 POSITION
+L-10-VALUE =>
+      {
+        description = "Allow access from somewhere...."
+        port        = 32040
+      },
+#####################################
+
+#Flattened Structure will look like this:
+ingress = [
+	0 =>  inbound_cidr_block      = 10.88.24.0/22
+        current_pdo_list_index  = 0
+        description             = "Allow access from somewhere...."
+        port                    = 32020
+
+
+	1 =>  inbound_cidr_block      = 10.88.24.0/22
+        current_pdo_list_index  = 1
+        description             = "Allow access from somewhere...."
+        port                    = 32040
+]
+
+
+
+
+
+=====================END-OF-FILE=====================

@@ -1,7 +1,7 @@
 resource "aws_security_group" "allow_cidr_blocks_sg" {
   name        = var.my_sg_name
   description = "Security Group that allows some CIDR blocks via a mapping variable"
-  vpc_id      = data.aws_vpc.cac-c5-vpc-id.id
+  vpc_id      = data.aws_vpc.sg-vpc-id.id
 
   // Other security group configuration settings
 

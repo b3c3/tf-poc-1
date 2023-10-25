@@ -13,11 +13,11 @@ variable "cidr_block_map" {
 variable "vpc_id" {
   type        = string
   description = "VPC ID"
-  default     = "vpc-054f0e96084ac7d49"
+  default     = "<replace-me-with-your-vpc-id>" #example: vpc-043f0e96084ac7d84
 }
 
 variable "my_sg_name" {
   type        = string
   description = "Security Group Name for Dynamic Ingress CIDR Blocks"
-  default     = "b3c301-allow-cidr-blocks-mapped-sg"
+  default     = "xx-allow-ingress-for-users-sg"
 }
