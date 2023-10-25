@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow_cidr_blocks_sg" {
-  name        = "b3c3-allow-cidr-blocks-mapped-sg"
+  name        = var.my_sg_name
   description = "Security Group that allows some CIDR blocks via a mapping variable"
   vpc_id      = data.aws_vpc.cac-c5-vpc-id.id
 
@@ -24,5 +24,9 @@ resource "aws_security_group" "allow_cidr_blocks_sg" {
       cidr_blocks = [ingress.value.inbound_cidr_block]
       description = ingress.value.description
     }
+  }
+
+  tags = {
+    Name = var.my_sg_name
   }
 }
