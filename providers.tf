@@ -12,6 +12,6 @@ terraform {
 provider "aws" {
   region                   = "us-east-1"
   shared_credentials_files = ["~/.aws/credentials"]
-  profile                  = "saml2aws01"
+  profile                  = "b3c3test01-cil-academy-c5"
 }
 
