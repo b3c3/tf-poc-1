@@ -31,15 +31,27 @@ variable "cidr_block_map" {
       }
     ],
 
-    "1.1.1.1/23" = [
+    "10.20.24.0/22" = [
       {
-        description = "Allow access from BOI VDI Pool M037-W10-X Offshore towards Algo AWA"
-        port        = 32020
+        description = "Allow access from BOI VDI Pool M037-W10-X Offshore towards Algo RiskManager"
+        port        = 32090
+      },
+      {
+        description = "Allow access from BOI VDI Pool M037-W10-X Offshore towards Algo Apps"
+        port        = 32080
+      },
+      {
+        description = "Allow access from BOI VDI Pool M037-W10-X Offshore towards Algo RiskWatch"
+        port        = 32050
       },
       {
         description = "Allow access from BOI VDI Pool M037-W10-X Offshore towards Algo Stadium"
         port        = 32040
       },
+      {
+        description = "Allow access from BOI VDI Pool M037-W10-X Offshore towards Algo AWA"
+        port        = 32020
+      }
     ]
   }
 
